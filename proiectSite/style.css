@@ -1,5 +1,4 @@
 body{
-    text-align: center; 
     margin: 0;
 }
 #top {
@@ -18,9 +17,8 @@ header {
     background-color:rgba(248, 149, 0, 0.89);
     display: inline-block;
     height: 125px;
-    width: 100%;
-    
-   
+    width: 100%; 
+    text-align: center;  
 }
 /* ul {
     display: inline-block;
@@ -59,18 +57,12 @@ header {
     box-shadow: 3px 3px #b3b3b375;
     background-color: white;
     position: relative;
-    
-    
-
-    
-
 }
 
 #sideBody ul li {
     list-style-type: none;
     margin-top: 20px;
-    text-align: left;
-    
+    text-align: left;    
 }
 #sideBody ul {
     text-align: left;
@@ -79,11 +71,24 @@ header {
 }
 
 #mainBody{
-    background-color: blue;
+    
     margin-left: 520px;
     margin-top : -430px;
     width: 800px;
-    height : 500px;
-    
+    height : 500px;   
+}
+#categoryName {
+    font-size: 26px;
+}
+#topMainBody p {
+    margin: 10 px;
+}
+.productInfo{
+    display: inline-block;
+    margin: 23px;
+    background-color: white;
+    box-shadow: 3px 3px #b3b3b375;
+    text-align: center;
+    border-radius: 5px;
 }
 

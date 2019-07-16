@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+}
+#top {
+ margin-bottom: 20px;
+ margin-top :10px;  
+}
+#top a {
+    text-decoration: none;
+    margin: 10px;
+    color:black;
+}
+#nav{
+    background-color: blue;
+}
+header {
+    background-color:rgba(248, 149, 0, 0.89);
+    display: inline-block;
+    height: 125px;
+    width: 100%; 
+    text-align: center;  
+}
+/* ul {
+    display: inline-block;
+}*/
+#top span {
+    margin : 50px;    
+}
+#logo {
+    font-size: 38px;
+    color : white;
+}
+#city {
+    color: gray;
+}
+#bottom input {
+    border-radius: 5px;
+    width: 600px;
+    height: 35px;
+    margin-left: 340px;
+}
+#bottom button {
+    background-color: rgb(132, 132, 223);
+    border-radius: 5px;
+    height: 40px;
+    width: 130px;
+    color : white;
+    box-shadow: inset -35px 0px 0px rgb(25, 0, 255);
+}
+
+#sideBody{
+    height: 500px;
+    width: 300px;
+    margin-left: 200px;
+    margin-top: -73px;  
+    border-radius: 5px;
+    box-shadow: 3px 3px #b3b3b375;
+    background-color: white;
+    position: relative;
+}
+
+#sideBody ul li {
+    list-style-type: none;
+    margin-top: 20px;
+    text-align: left;    
+}
+#sideBody ul {
+    text-align: left;
+    margin-left: -10px;
+    padding-top : 10px;
+}
+
+#mainBody{
+    
+    margin-left: 520px;
+    margin-top : -430px;
+    width: 800px;
+    height : 500px;   
+}
+#categoryName {
+    font-size: 26px;
+}
+#topMainBody p {
+    margin: 10 px;
+}
+.productInfo{
+    display: inline-block;
+    margin: 23px;
+    background-color: white;
+    box-shadow: 3px 3px #b3b3b375;
+    text-align: center;
+    border-radius: 5px;
+}
+

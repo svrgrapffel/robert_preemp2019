@@ -1,6 +1,10 @@
 body{
     margin: 0;
 }
+.container {
+    margin-left:10%;
+    margin-right:10%;
+}
 /* header principal ce se impare in doua parti top/bottom*/ 
 header {
     background-color:rgba(248, 149, 0, 0.89);

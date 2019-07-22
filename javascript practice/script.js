@@ -14,10 +14,18 @@
 var fn = document.getElementById("firstName");
 var ln = document.getElementById("lastName");
 var email = document.getElementById("email");
+
+var add = document.getElementsByClassName("add");
+var subtract = document.getElementsByClassName("remove");
+var quantityElements = document.getElementsByClassName("quantity");
+var finalPrice = document.getElementsByClassName("finalPrice");
+var totalPrice = document.getElementsByClassName("totalPrice");
+console.log("price", totalPrice[0].innerHTML);
 var isFN = false;
 var isLN = false;
 var isEM = false;
-
+var productPrice = 4;
+/*var finalPrice;*/
 /*-----*/
 
 fn.addEventListener("blur", function(e) {
@@ -83,4 +91,26 @@ function tryEnable() {
   if (isFN == true && isLN == true && isEM == true) {
     document.getElementById("checkout").disabled = false;
   }
+}
+
+/*globalIndex = 0;*/
+/*adaugam functionalitate la butoanele de + si -*/
+
+for (index = 0; index < add.length; index++) {
+  add[index].addEventListener("click", addFunction.bind(null, index));
+  subtract[index].addEventListener("click", subtractFunction.bind(null, index));
+}
+
+function addFunction(index) {
+  quantityElements[index].innerHTML =
+    Number(quantityElements[index].innerHTML) + 1;
+  finalPrice[index].innerHTML = Number(quantityElements[index].innerHTML) * 4;
+  totalPrice[0].innerHTML = Number(totalPrice[0].innerHTML) + 4;
+}
+
+function subtractFunction(index) {
+  quantityElements[index].innerHTML =
+    Number(quantityElements[index].innerHTML) - 1;
+  finalPrice[index].innerHTML = Number(quantityElements[index].innerHTML) * 4;
+  totalPrice[0].innerHTML = Number(totalPrice[0].innerHTML) - 4;
 }

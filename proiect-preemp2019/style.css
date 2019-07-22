@@ -8,8 +8,8 @@ body {
   background-color: #fafafa;
 }
 .container {
-  margin-right: 10%;
-  margin-left: 10%;
+  margin-right: 8%;
+  margin-left: 8%;
   display: flex;
 }
 header {
@@ -45,7 +45,7 @@ header {
   color: black;
 }
 .top-right-search input {
-  width: 70%;
+  width: 69%;
   height: 4rem;
   margin-top: 3rem;
   margin-bottom: 1.3rem;

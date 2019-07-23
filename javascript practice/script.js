@@ -19,14 +19,14 @@ var add = document.getElementsByClassName("add");
 var subtract = document.getElementsByClassName("remove");
 var quantityElements = document.getElementsByClassName("quantity");
 var finalPrice = document.getElementsByClassName("finalPrice");
-var totalPrice = document.getElementsByClassName("totalPrice");
-console.log("price", totalPrice[0].innerHTML);
+var totalPrice = document.getElementsByClassName("totalPrice")[0];
+var removeProduct = document.getElementsByClassName("remove-item");
+
 var isFN = false;
 var isLN = false;
 var isEM = false;
 var productPrice = 4;
 /*var finalPrice;*/
-/*-----*/
 
 fn.addEventListener("blur", function(e) {
   var letters = /^[A-Za-z]+$/;
@@ -113,4 +113,18 @@ function subtractFunction(index) {
     Number(quantityElements[index].innerHTML) - 1;
   finalPrice[index].innerHTML = Number(quantityElements[index].innerHTML) * 4;
   totalPrice[0].innerHTML = Number(totalPrice[0].innerHTML) - 4;
+}
+/*Adaugam functionalitate la butonul X*/
+function removeRow(event) {
+  event.preventDefault();
+  var target = event.target;
+
+  var parent = target.parentNode.parentNode;
+  var rowTotalPrice = parent.children[4].innerHTML;
+  totalPrice.innerHTML = Number(totalPrice.innerHTML) - Number(rowTotalPrice);
+  console.log(totalPrice.innerHTML);
+  parent.style.display = "none";
+}
+for (let i = 0; i < removeProduct.length; i++) {
+  removeProduct[i].addEventListener("click", removeRow);
 }

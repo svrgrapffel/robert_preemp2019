@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="https://google.com" id="google-link">Google link</a>
+
+    <div id="page" style="padding:20 px; border:1px solid blue; height:100px;">
+      <div
+        id="container"
+        style="padding:20 px; border:1px solid green; height:50px;"
+      ></div>
+    </div>
+
+    <script>
+      /*window.onload = function() {
+        alert("The page is loaded! ");*/
+
+      var link = document.getElementById("google-link");
+
+      function eventHandler(event) {
+        console.log(event.type + " on link " + event.target.text);
+      }
+
+      /*link.onclick = function() {
+          console.log("Clicked on link");
+        };
+      };*/
+
+      /* window.onload = function() {
+        console.log("Second log");
+      }; */
+
+      /*link.addEventListener("mouseenter", eventHandler);*/
+
+      /*link.addEventListener(
+        "mouseenter",
+        function() {
+          console.log("Hover once");
+        },
+        { once: true }
+      );*/
+
+      /*link.removeEventListener("mouseenter", eventHandler);*/
+
+      /*window.addEventListener("click", function() {
+        document.documentElement.requestFullscreen();
+      });*/
+
+      /*var event = new Event("build");
+
+      window.addEventListener(
+        "build",
+        function(event) {
+          console.log(event.type + " Hello");
+        },
+        false
+      );
+
+      window.dispatchEvent(event);*/
+
+      var container = document.getElementById("container");
+      var page = document.getElementById("page");
+
+      function eventHandler(event) {
+        console.log(event.type + "on " + event.currentTarget.id);
+        event.stopPropagation();
+      }
+
+      /*page.addEventListener("click", eventHandler, true);*/
+      page.addEventListener("click", eventHandler);
+      container.addEventListener("click", eventHandler);
+    </script>
+  </body>
+</html>

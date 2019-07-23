@@ -6,12 +6,22 @@ var rmvImg = document.getElementById("removeBtn");
 /*var bodyClick = document.querySelector("body");*/
 var imageAgain = document.getElementById("showAgain");
 
-function displayImage(event) {
+var parinteIMG = document.getElementById("parinteIMG");
+var event = new Event("myEvent");
+
+function eventHandler() {
+  console.log("Hello from myEvent");
+}
+
+function displayImage() {
   image.style.display = "block";
 }
-function hideImage(event) {
+
+function hideImage() {
+  parinteIMG.dispatchEvent(event);
   image.style.display = "none";
 }
+
 function removeDOM(event) {
   imagine.parentNode.removeChild(image);
   console.log("Imaginea a fost scoase");
@@ -26,5 +36,6 @@ function removeDOM(event) {
 buttonClick.addEventListener("click", displayImage);
 rmvImg.addEventListener("click", removeDOM);
 image.addEventListener("click", hideImage);
-/*bodyClick.addEventListener("click", somethingClicked);*/
+parinteIMG.addEventListener("myEvent", eventHandler);
 imageAgain.addEventListener("click", displayImage);
+/*bodyClick.addEventListener("click", somethingClicked);*/

@@ -9,4 +9,3 @@ function displayImage(event) {
 }
 
 buttonClick.addEventListener("click", displayImage);
-hgdgdggdf;

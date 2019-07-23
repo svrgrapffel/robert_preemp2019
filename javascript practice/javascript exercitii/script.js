@@ -22,7 +22,7 @@ function hideImage() {
   image.style.display = "none";
 }
 
-function removeDOM(event) {
+function removeDOM() {
   imagine.parentNode.removeChild(image);
   console.log("Imaginea a fost scoase");
   alert("Imaginea a fost stearsa");

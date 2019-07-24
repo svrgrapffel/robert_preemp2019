@@ -4,91 +4,28 @@
             <link  rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div>
-            <header>
-                <div id="top">
-                    <span id="logo">Amazing Store</span>
-                    <span>My City: <span id="city" style="margin:0">Las Vegas</span></span>
+		<button class="box">.</button>
+		<button class="box">.</button>
+		<button class="box">.</button>
+		<button class="box">.</button>
+		<button class="box">.</button>
+		<button class="box">.</button>
+		<button class="box">.</button>
+		<button class="box">.</button>
+		<button class="box">.</button>
                     
-                    <span>8 800 505-04-83</span>
-                    <span>
-                        <a href="#">Shipping</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Company</a>
-                        <a href="#">My account</a>
-                    </span>
-                </div>
-                <div id="bottom">
-                        <input type="text" placeholder="Search products by SKU or name">
-                        <button>My Cart <span>12</span></button>
-                </div>
-                
-            </header>
-        
-            <div id="sideBody">
-                <ul>
-                    <li>All Categories</li>
-                    <li>Patches</li>
-                    <li>Patches</li>
-                    <li>Patches</li>
-                    <li>Patches</li>
-                    <li>Patches</li>
-                    <li>Patches</li>
-                    <li>Patches</li>
-                </ul> 
-            </div>
-            <div id = "mainBody">
-                <div id="topMainBody">
-                    <p><span id="categoryName">Creams&Gel</span></p>
-                    <p>BRAND: <a href="#"> All Brands</a> SKIN TYPE:<a href="#"> ALL TYPES</a> AGE:<a href="#"> 30+</a></p>
-                    <hr>
-                </div>
-                
-                        <div id="productMainBody">
-                            <div class="productInfo">
-                                <img src="./assets/a.jpg" width="150px" height="150px">
-                                <p>Nume Produs</p>
-                                <p>$5</p>
-                            </div>
-                            <div class="productInfo">
-                                    <img src="./assets/b.jpg" width="150px" height="150px">
-                                    <p>Nume Produs</p>
-                                    <p>$5</p>
-                            </div>
-                            <div class="productInfo">
-                                    <img src="./assets/c.jpg" width="150px" height="150px">
-                                    <p>Nume Produs</p>
-                                    <p>$5</p>
-                            </div>
-                            <div class="productInfo">
-                                    <img src="./assets/a.jpg" width="150px" height="150px">
-                                    <p>Nume Produs</p>
-                                    <p>$5</p>
-                            </div>
-                            <div class="productInfo">
-                                    <img src="./assets/a.jpg" width="150px" height="150px">
-                                    <p>Nume Produs</p>
-                                    <p>$5</p>
-                                </div>
-                                <div class="productInfo">
-                                        <img src="./assets/b.jpg" width="150px" height="150px">
-                                        <p>Nume Produs</p>
-                                        <p>$5</p>
-                                </div>
-                                <div class="productInfo">
-                                        <img src="./assets/c.jpg" width="150px" height="150px">
-                                        <p>Nume Produs</p>
-                                        <p>$5</p>
-                                </div>
-                                <div class="productInfo">
-                                        <img src="./assets/a.jpg" width="150px" height="150px">
-                                        <p>Nume Produs</p>
-                                        <p>$5</p>
-                                </div>
-                        </div>
-                    
+       <script> var allButtonsOnPage = document.querySelectorAll('button');
+ 
+				var logButtonIndex = function(buttonIndex) {
+				console.log('buttonIndex:', buttonIndex);}
+				
+				
 
-            </div>
-         </div>  
+				allButtonsOnPage.forEach(function(button, index) {
+				  button.addEventListener('click', function() {
+					logButtonIndex(index);
+				  });
+				});
+				</script>
     </body>
 </html>

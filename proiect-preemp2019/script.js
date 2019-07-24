@@ -1,7 +1,12 @@
 console.log("CONNECTED");
 var optionClick = document.querySelector(".options");
 var subOptions = document.getElementById("sublist");
-var products = document.querySelector(".btm-right-product");
+
+var products = document.querySelectorAll(".btm-right-product");
+var logProductIndex = function(productIndex) {
+  console.log("productIndex:", productIndex);
+};
+
 var modal = document.getElementById("modal");
 var closeModalPg = document.getElementById("closeModal");
 
@@ -15,13 +20,13 @@ function showSuboptions() {
 optionClick.addEventListener("click", showSuboptions);
 
 /*Se adauga functionalitate la modal*/
-
-function showModal() {
-  modal.style.display = "block";
-}
-
 function closeModals() {
   modal.style.display = "none";
 }
-products.addEventListener("click", showModal);
+products.forEach(function(product, index) {
+  product.addEventListener("click", function() {
+    modal.style.display = "block";
+    logProductIndex(index);
+  });
+});
 closeModalPg.addEventListener("click", closeModals);

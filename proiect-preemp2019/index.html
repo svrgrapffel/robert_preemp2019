@@ -44,8 +44,8 @@
           <ul>
             <li>
               <p style="color: gray; margin-bottom: 1rem;">ALL CATEGORIES</p>
-              <h4>FACE</h4>
-              <ul id="sublist">
+              <h4 class="options">FACE</h4>
+              <ul id="sublist" style="display:none">
                 <li>Creams&Gels</li>
                 <li>Patches</li>
                 <li>Emulsions</li>
@@ -125,6 +125,48 @@
         </div>
       </div>
     </div>
-    <script></script>
+    <!--Aici incepe modal-->
+    <div id="modal">
+      <div id="modal-content">
+        <div class="left-modal">
+          <img src="b.jpg" />
+        </div>
+        <div class="right-modal">
+          <div id="stele-modal">
+            <div>
+              <p>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </p>
+            </div>
+            <div>
+              <p><i class="fas fa-times"></i></p>
+            </div>
+          </div>
+          <div id="titlu-modal">
+            <h2>Product Name</h2>
+          </div>
+          <div id="detailsPrice-modal">
+            <p>$4.00</p>
+            <p>50ml</p>
+          </div>
+          <div id="buton-modal">
+            <p>Add to cart</p>
+          </div>
+          <div id="descriere-modal">
+            <p>
+              A portable cooling eye stick that instantly relieves puffy,
+            </p>
+            <p>
+              tired eyes by hydrating the delicate skin and minimizing fine
+              lines around the eye for
+            </p>
+            <p>a refreshed and revitalized look.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -125,3 +125,51 @@ header {
   width: 100%;
   margin-bottom: 1rem;
 }
+/*Stilizare modal*/
+
+#modal {
+  background-color: white;
+  display: none;
+  /* position: fixed;*/
+  z-index: 1;
+
+  height: 500px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#modal-content {
+  display: flex;
+  margin-right: 50px;
+}
+#right-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 100px;
+}
+#stele-modal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#titlu-modal {
+  margin-top: 20px;
+}
+#detailsPrice-modal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#buton-modal {
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+#descriere-modal {
+  color: gray;
+  margin-top: 20px;
+  line-height: 1.8;
+}

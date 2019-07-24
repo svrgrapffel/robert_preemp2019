@@ -3,9 +3,9 @@ var optionClick = document.querySelector(".options");
 var subOptions = document.getElementById("sublist");
 
 var products = document.querySelectorAll(".btm-right-product");
-var logProductIndex = function(productIndex) {
+/*var logProductIndex = function(productIndex) {
   console.log("productIndex:", productIndex);
-};
+};*/
 
 var modal = document.getElementById("modal");
 var closeModalPg = document.getElementById("closeModal");
@@ -23,10 +23,11 @@ optionClick.addEventListener("click", showSuboptions);
 function closeModals() {
   modal.style.display = "none";
 }
-products.forEach(function(product, index) {
+closeModalPg.addEventListener("click", closeModals);
+
+products.forEach(function(product) {
   product.addEventListener("click", function() {
     modal.style.display = "block";
-    logProductIndex(index);
+    /*logProductIndex(index);*/
   });
 });
-closeModalPg.addEventListener("click", closeModals);

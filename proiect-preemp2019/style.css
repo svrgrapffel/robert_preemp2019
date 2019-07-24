@@ -128,24 +128,28 @@ header {
 /*Stilizare modal*/
 
 #modal {
-  background-color: white;
+  background-color: rgba(196, 196, 196, 0.39);
   display: none;
-  /* position: fixed;*/
-  z-index: 1;
-
-  height: 500px;
-  margin-left: 15%;
-  margin-right: 15%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 12%;
 }
 
 #modal-content {
+  background-color: white;
   display: flex;
-  margin-right: 50px;
+  padding-right: 50px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 #right-modal {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
   padding-top: 100px;
 }
 #stele-modal {

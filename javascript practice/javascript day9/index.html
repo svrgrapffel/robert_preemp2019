@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("CONNECTED");
+      /*conceptul de closure- functia inner are acces la var si param din outer*/
+      /* function outer(x, y) {
+        let a = 5;
+
+        function inner() {
+          a++;
+          console.log(a);
+          console.log(x + y);
+        }
+        console.log(a);
+        inner();
+      }
+
+      outer(4, 3);*/
+      /*------------------------------------------------------------------*/
+      /*conceptul de hoisting - conteaza ordinea*/
+      /* var b = 10;
+      console.log(a);
+      console.log(b);
+      var a = 5;*/
+      /*------------------------------------------------------------------*/
+      /*alt exemplu de closure*/
+      /*function sum(i) {
+        return function(j) {
+          let sum = i + j;
+          return sum;
+        };
+      }
+      console.log(sum(5)(6));*/
+      /*------------------------------------------------------------------*/
+      /*alt exemplu de closure ----calcul medie dintr-un array de obiecte*/
+      /*let pers = [
+        { name: "A", age: 25 },
+        { name: "B", age: 23 },
+        { name: "C", age: 31 },
+        { name: "D", age: 18 },
+        { name: "E", age: 22 },
+        { name: "F", age: 40 }
+      ];*/
+
+      /*function medie() {
+        let sum = 0;
+        for (let i = 0; i < pers.length; i++) {
+          sum = sum + pers[i].age;
+          medie = sum / pers.length;
+        }
+        console.log(medie);
+      }
+      medie();*/
+      /*------------------------------------------------------------------*/
+      /*varianta cu foreach*/
+      /*let sum = 0;
+      function medie() {
+        medie = sum / pers.length;
+        return medie;
+      }
+
+      pers.forEach(persObj => {
+        sum += persObj.age;
+      });
+      console.log(medie());*/
+      /*------------------------------------------------------------------*/
+      /*exersam this*/
+      /*let arr = [
+        {
+          fn: "A",
+          ln: "B",
+          fullName: function() {
+            return this.fn + this.ln;
+          }
+        },
+        {
+          fn: "C",
+          ln: "D",
+          fullName: function() {
+            return this.fn + this.ln;
+          }
+        },
+        {
+          fn: "E",
+          ln: "F",
+          fullName: function() {
+            return this.fn + this.ln;
+          }
+        }
+      ];
+
+      arr.forEach(persObj => console.log(persObj.fullName()));*/
+      /*------------------------------------------------------------------*/
+      /*creare calculator*/
+      let calculator = {
+        a: 0,
+        b: 0,
+        read: function() {
+          this.a = prompt("First Number:");
+          this.b = prompt("Second Number:");
+        },
+        sum: function() {
+          return Number(this.a) + Number(this.b);
+        },
+        mul: function() {
+          return Number(this.a) * Number(this.b);
+        }
+      };
+      calculator.read();
+      alert(calculator.sum());
+      alert(calculator.mul());
+    </script>
+  </body>
+</html>

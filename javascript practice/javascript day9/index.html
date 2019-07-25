@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("CONNECTED");
+      /*conceptul de closure- functia inner are acces la var si param din outer*/
+      /* function outer(x, y) {
+        let a = 5;
+
+        function inner() {
+          a++;
+          console.log(a);
+          console.log(x + y);
+        }
+        console.log(a);
+        inner();
+      }
+
+      outer(4, 3);*/
+      /*------------------------------------------------------------------*/
+      /*conceptul de hoisting - conteaza ordinea*/
+      /* var b = 10;
+      console.log(a);
+      console.log(b);
+      var a = 5;*/
+      /*------------------------------------------------------------------*/
+      /*alt exemplu de closure*/
+      /*function sum(i) {
+        return function(j) {
+          let sum = i + j;
+          return sum;
+        };
+      }
+      console.log(sum(5)(6));*/
+      /*------------------------------------------------------------------*/
+      /*alt exemplu de closure*/
+    </script>
+  </body>
+</html>

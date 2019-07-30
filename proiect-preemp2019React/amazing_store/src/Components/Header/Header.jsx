@@ -4,6 +4,7 @@ import Logo from "../Logo/Logo";
 import Contact from "../Contact/Contact";
 import NavigationBar from "../Navigation/Navigation-bar";
 import SearchBar from "../SearchBar/SearchBar";
+import CartBtn from "../CartBtn/CartBtn";
 
 class Header extends React.Component {
   render() {
@@ -14,8 +15,9 @@ class Header extends React.Component {
           <Contact />
           <NavigationBar />
         </div>
-        <div class="header-bottom">
+        <div className="header-bottom">
           <SearchBar />
+          <CartBtn />
         </div>
       </div>
     );

@@ -18,17 +18,28 @@ class MainContent extends React.Component {
           "Peeling",
           "Masks"
         ],
-        BODY: [],
-        FOOT: [],
-        HANDS: [],
-        HAIR: [],
-        MAKEUP: []
-      }
+        BODY: ["ceva-body"],
+        FOOT: ["ceva-foot"],
+        HANDS: ["ceva-hands"],
+        HAIR: ["ceva-hair"],
+        MAKEUP: ["ceva-mkup"]
+      },
+      showSubcat: null
     };
   }
+  showMeSubcat = catName => {
+    this.setState({ showSubcat: catName });
+    console.log(catName);
+  };
 
   render() {
-    return <Sidebar categories={this.state.categories} />;
+    return (
+      <Sidebar
+        categories={this.state.categories}
+        showSubcat={this.state.showSubcat}
+        showMeSubcat={this.showMeSubcat}
+      />
+    );
   }
 }
 

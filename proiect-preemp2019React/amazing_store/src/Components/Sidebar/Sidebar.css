@@ -7,3 +7,25 @@
   /*overflow: hidden;*/
   margin: 1rem;
 }
+
+.subCat {
+  display: flex;
+  flex-direction: column;
+}
+.subCat-li {
+  list-style-type: none;
+  text-align: left;
+  cursor: pointer;
+  margin: 10px;
+}
+.subCat-li:hover {
+  color: rgb(255, 196, 0);
+}
+.sidebar-container {
+  width: 20%;
+  background-color: white;
+  border: 1px solid black;
+  margin: -4.1% 3% 0 8%;
+  border-radius: 5px;
+  font-size: 18px;
+}

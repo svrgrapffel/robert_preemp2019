@@ -1,7 +1,6 @@
 import React from "react";
 import "./MainContent.css";
 import Sidebar from "../Sidebar/Sidebar";
-import SubComp from "../Sidebar-subComp/Sidebar-sybComp";
 
 class MainContent extends React.Component {
   constructor(props) {
@@ -32,15 +31,14 @@ class MainContent extends React.Component {
     this.setState({ showSubcat: catName });
     console.log(catName);
   };
+
   render() {
     return (
       <Sidebar
         categories={this.state.categories}
         showSubcat={this.state.showSubcat}
         showMeSubcat={this.showMeSubcat}
-      >
-        <SubComp />
-      </Sidebar>
+      />
     );
   }
 }

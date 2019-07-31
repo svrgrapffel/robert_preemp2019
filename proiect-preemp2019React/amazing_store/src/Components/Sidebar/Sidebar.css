@@ -7,3 +7,16 @@
   /*overflow: hidden;*/
   margin: 1rem;
 }
+
+.subCat {
+  display: flex;
+  flex-direction: column;
+}
+.subCat-li {
+  list-style-type: none;
+  text-align: left;
+  cursor: pointer;
+}
+.subCat-li:hover {
+  color: rgb(255, 196, 0);
+}

@@ -7,12 +7,18 @@ import SearchBar from "../SearchBar/SearchBar";
 import CartBtn from "../CartBtn/CartBtn";
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      location: ["Los Angeles", "New York", "Timisoara"]
+    };
+  }
   render() {
     return (
       <div className="header-container">
         <div className="header-top-container">
           <Logo />
-          <Contact />
+          <Contact location={this.state.location} />
           <NavigationBar />
         </div>
         <div className="header-bottom">

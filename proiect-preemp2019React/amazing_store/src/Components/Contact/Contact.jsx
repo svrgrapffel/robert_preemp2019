@@ -1,13 +1,18 @@
 import React from "react";
 import "./Contact.css";
 
-const Contact = () => {
+const Contact = props => {
   return (
     <div className="contact">
       <h4 className="subTitle">
-        <i className="fas fa-map-marker-alt" /> My city:
-        <a href="https://goo.gl/maps/27cDydCFh38FUNeb6" target="_blank">
-          Los Angeles
+        <i className="fas fa-map-marker-alt" /> My city:{" "}
+        <a>
+          {" "}
+          <select className="locationSelect">
+            {props.location.map(city => {
+              return <option className="locationSelect">{city}</option>;
+            })}
+          </select>
         </a>
       </h4>
 

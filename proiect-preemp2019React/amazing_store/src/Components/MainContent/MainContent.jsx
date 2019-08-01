@@ -1,6 +1,7 @@
 import React from "react";
 import "./MainContent.css";
 import Sidebar from "../Sidebar/Sidebar";
+import BigContent from "../BigContent/BigContent";
 
 class MainContent extends React.Component {
   constructor(props) {
@@ -34,11 +35,14 @@ class MainContent extends React.Component {
 
   render() {
     return (
-      <Sidebar
-        categories={this.state.categories}
-        showSubcat={this.state.showSubcat}
-        showMeSubcat={this.showMeSubcat}
-      />
+      <>
+        <Sidebar
+          categories={this.state.categories}
+          showSubcat={this.state.showSubcat}
+          showMeSubcat={this.showMeSubcat}
+        />
+        <BigContent />
+      </>
     );
   }
 }

@@ -1,0 +1,33 @@
+.bigContentTop-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.bigContentTop-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.bigContentTop-btm {
+  display: flex;
+  justify-content: space-between;
+}
+.left-top {
+  display: flex;
+  justify-content: space-between;
+}
+.left-top p {
+  margin-right: 1.5rem;
+}
+span {
+  color: #8077aa;
+}
+span:hover {
+  cursor: pointer;
+}
+.bigContentTop-catName {
+  font-size: 1.8rem;
+}
+.s {
+  margin-top: 40px;
+}

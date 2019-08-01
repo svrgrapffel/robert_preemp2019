@@ -22,10 +22,11 @@
   color: rgb(255, 196, 0);
 }
 .sidebar-container {
-  width: 20%;
+  width: 18%;
   background-color: white;
-  border: 1px solid black;
   margin: -4.1% 3% 0 8%;
   border-radius: 5px;
   font-size: 18px;
+  position: fixed;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }

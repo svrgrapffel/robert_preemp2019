@@ -15,8 +15,19 @@
 .contact i {
   margin-right: 0.5rem;
 }
-.contact a {
+/*.contact a {
   text-decoration: none;
   margin-left: 0.5rem;
   color: #8077aa;
+}*/
+
+.locationSelect {
+  background-color: transparent;
+  border: none;
+  color: blue;
+  appearance: none;
+  font-size: 1 rem;
+}
+.locationSelect:hover {
+  cursor: pointer;
 }

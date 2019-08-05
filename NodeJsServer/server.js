@@ -4,6 +4,8 @@ const fs = require("fs");
 
 http
   .createServer((req, res) => {
+    res.setHeader("Acces-Control-Allow-Origin", "#");
+
     if (/(\/)(categories)(\/)?$/gi.test(req.url)) {
       res.writeHead(200, { "Content-Type": "application/json" });
       fs.readFile(__dirname + "/categories.json", (err, data) =>

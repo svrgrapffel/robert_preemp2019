@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "FACE"
+  },
+  {
+    "id": 2,
+    "name": "BODY"
+  },
+  {
+    "id": 3,
+    "name": "FOOT"
+  },
+  {
+    "id": 4,
+    "name": "HANDS"
+  },
+  {
+    "id": 5,
+    "name": "HAIR"
+  },
+  {
+    "id": 6,
+    "name": "MAKEUP"
+  }
+]

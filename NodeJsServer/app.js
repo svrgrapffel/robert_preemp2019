@@ -41,17 +41,10 @@ const server = https.createServer(
   app
 );
 const bodyParser = require("body-parser");
-const categoryRouter = require("./routes/categories");
-//const productsRouter = require("./routes/products");
-const productDetail = require("./routes/productDetail");
-const categorieDetailProd = require("./routes/categorieDatailProd");
-
+const routes = require("./routes/routes");
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use("/", categoryRouter);
-//app.use("/", productsRouter);
-app.use("/", productDetail);
-app.use("/", categorieDetailProd);
+app.use("/", routes);
 
 server.listen(5000);

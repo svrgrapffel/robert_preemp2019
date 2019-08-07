@@ -48,3 +48,4 @@ app.use(bodyParser.json());
 app.use("/", routes);
 
 server.listen(5000);
+module.exports = app;

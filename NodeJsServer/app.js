@@ -1,6 +1,6 @@
 // const http = require("http");
 // //const server = http.createServer();
-// const fs = require("fs");
+const fs = require("fs");
 
 // http
 //   .createServer((req, res) => {
@@ -32,20 +32,20 @@
 //   .listen(5000, "127.0.0.1");
 const express = require("express");
 const app = express();
-const http = require("http");
-const server = http.createServer(app);
+const https = require("https");
+const server = https.createServer(
+  {
+    key: fs.readFileSync("server.key"),
+    cert: fs.readFileSync("server.cert")
+  },
+  app
+);
 const bodyParser = require("body-parser");
-const categoryRouter = require("./routes/categories");
-const productsRouter = require("./routes/products");
-const productDetail = require("./routes/productDetail");
-const categorieDetailProd = require("./routes/categorieDatailProd");
-
+const routes = require("./routes/routes");
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use("/", categoryRouter);
-app.use("/", productsRouter);
-app.use("/", productDetail);
-app.use("/", categorieDetailProd);
+app.use("/", routes);
 
 server.listen(5000);
+module.exports = app;

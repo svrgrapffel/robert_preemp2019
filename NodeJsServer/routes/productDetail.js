@@ -1,22 +1,43 @@
 const express = require("express");
 const router = express.Router();
 const products = require("../products");
+const { validatePathParams } = require("../MIddleware/validate");
+const { getProductByIdSchema } = require("../MIddleware/validate");
+// router.get("/products/:id", (req, res) => {
+//   const id = req.params.id;
+//   const prod = products.filter(item => id == item.id).pop();
+//   const data = {
+//     data: [prod]
+//   };
+//   const error = {
+//     errors: [{ message: "product not found" }]
+//   };
 
-router.get("/products/:id", (req, res) => {
-  const id = req.params.id;
-  const prod = products.filter(item => id == item.id).pop();
-  const data = {
-    data: [prod]
-  };
-  const error = {
-    errors: [{ message: "product not found" }]
-  };
+//   if (prod === undefined) {
+//     res.status(200).json(error);
+//     return;
+//   }
+//   res.status(200).json(data);
+// });
+router.get(
+  "/products/:id",
+  validatePathParams(getProductByIdSchema),
+  (req, res) => {
+    const id = req.params.id;
+    const prod = products.filter(item => id == item.id).pop();
+    const data = {
+      data: [prod]
+    };
+    const error = {
+      errors: [{ message: "product not found" }]
+    };
 
-  if (prod === undefined) {
-    res.status(200).json(error);
-    return;
+    if (prod === undefined) {
+      res.status(200).json(error);
+      return;
+    }
+    res.status(200).json(data);
   }
-  res.status(200).json(data);
-});
+);
 
 module.exports = router;

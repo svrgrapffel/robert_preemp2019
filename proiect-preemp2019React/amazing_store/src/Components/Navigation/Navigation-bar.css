@@ -5,7 +5,7 @@
   margin-right: 5%;
 }
 .main-menu {
-  position: fixed;
+  position: absolute;
   display: flex;
   list-style-type: none;
 }

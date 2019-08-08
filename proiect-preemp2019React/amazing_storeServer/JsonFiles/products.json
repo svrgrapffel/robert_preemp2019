@@ -50,22 +50,14 @@
   {
     "id": 7,
     "name": "Product 7",
-    "description": "Product  description - Hair",
-    "price": 500,
+    "description": "Product  description Body&Hair",
     "categories": [5],
+    "price": 5,
     "imgUrl": "./img/prod7.jpg"
   },
   {
     "id": 8,
     "name": "Product 8",
-    "description": "Product  description - Makeup",
-    "price": 5,
-    "categories": [6],
-    "imgUrl": "./img/prod7.jpg"
-  },
-  {
-    "id": 9,
-    "name": "Product 9",
     "description": "Product  description - Makeup",
     "price": 5,
     "categories": [6],

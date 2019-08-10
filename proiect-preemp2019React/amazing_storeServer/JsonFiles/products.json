@@ -62,5 +62,13 @@
     "price": 5,
     "categories": [6],
     "imgUrl": "./img/prod7.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Product 9",
+    "description": "Product 9 description - Face & Body",
+    "price": 5,
+    "categories": [1, 2],
+    "imgUrl": "./img/prod7.jpg"
   }
 ]

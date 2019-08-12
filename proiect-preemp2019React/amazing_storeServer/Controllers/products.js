@@ -22,6 +22,7 @@ const productDetail = (req, res) => {
   }
   res.status(200).json(data);
 };
+/*---------------------------------------------------*/
 
 const createProduct = (req, res) => {
   //console.log(req.body);
@@ -52,6 +53,7 @@ const createProduct = (req, res) => {
 
   // res.end(res);
 };
+/*---------------------------------------------------*/
 
 const deleteProduct = (req, res) => {
   fs.readFile("./JsonFiles/products.json", function(err, data) {
@@ -72,6 +74,7 @@ const deleteProduct = (req, res) => {
     });
   });
 };
+/*---------------------------------------------------*/
 
 const updateProduct = (req, res) => {
   fs.readFile("./JsonFiles/products.json", function(err, data) {
